@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>for someone special ♡</title>
+<style>
+:root{--pink:#f5b8c9;--rose:#c85f82;--cream:#fff8f5;--ink:#563b47}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif;overflow-x:hidden}
+.page{min-height:100svh;display:none;position:relative;padding:80px 22px 42px;overflow:hidden}.page.active{display:flex;align-items:center;justify-content:center}
+.wrap{width:min(760px,100%);position:relative;z-index:2;text-align:center}
+.eyebrow{font:12px Arial,sans-serif;letter-spacing:4px;text-transform:uppercase;color:var(--rose)}
+h1{font-size:clamp(38px,8vw,70px);font-weight:400;line-height:1.05;margin:18px 0;color:#9d4968}
+h2{font-size:clamp(30px,6vw,48px);font-weight:400;margin:12px 0 24px}
+p{font-size:17px;line-height:1.9}.date{font:13px Arial,sans-serif;letter-spacing:1.5px;color:#987785}
+.letter{background:#fffdfb;border:1px solid #f1d8df;border-radius:22px;padding:clamp(24px,5vw,48px);box-shadow:0 18px 60px #b56b8017;text-align:left}
+.letter p{margin:12px 0}.signature{font-style:italic;text-align:right;margin-top:28px}
+nav{position:fixed;z-index:20;top:14px;left:50%;transform:translateX(-50%);display:flex;gap:8px;background:#fffdf0d9;border:1px solid #f0dce2;border-radius:999px;padding:7px;backdrop-filter:blur(10px)}
+nav button,.next{border:0;border-radius:999px;padding:11px 17px;background:transparent;color:#89566a;font:13px Arial;cursor:pointer}
+nav button.active,.next{background:#d77d9a;color:white}
+.next{margin-top:22px;padding:13px 24px}
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:24px auto;max-width:680px}
+.photo{grid-column:span 2;background:white;padding:8px 8px 17px;border-radius:8px;box-shadow:0 8px 24px #7c42521a;transform:rotate(var(--r));}
+.photo:nth-child(4),.photo:nth-child(5){grid-column:span 3}.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#f7e5eb;border-radius:4px}.photo small{display:block;margin-top:10px;font:12px Arial;color:#966c7d}
+.soft-note{max-width:580px;margin:0 auto;color:#795968}
+.spotify{margin:26px auto 0;max-width:430px;background:#fff;border:1px solid #f1d8df;padding:16px;border-radius:18px;text-align:left}
+.spotify iframe{width:100%;height:152px;border:0;border-radius:12px}.spotify label{font:12px Arial;letter-spacing:1px;color:#966c7d}.spotify input{width:100%;margin:8px 0;padding:11px;border:1px solid #ead2da;border-radius:9px}
+#page3{background:radial-gradient(ellipse at center,#ffe5ed,#f6bdcf 55%,#e99bb5)}
+.heart-stage{height:250px;position:relative;margin:10px auto 20px;display:flex;align-items:center;justify-content:center}
+.half{position:absolute;font-size:clamp(80px,18vw,150px);color:#bd4f79;filter:drop-shadow(0 10px 16px #a7426a55);opacity:0}
+.half.left{left:-40%;transform:translateX(-100%);}.half.right{right:-40%;transform:translateX(100%)}
+#page3.active .half.left{animation:fromLeft 2s .3s forwards}#page3.active .half.right{animation:fromRight 2s .3s forwards}
+@keyframes fromLeft{to{left:50%;transform:translateX(-50%)}}@keyframes fromRight{to{right:50%;transform:translateX(50%)}}
+.final-heart{font-size:clamp(90px,20vw,160px);opacity:0;transform:scale(.2);color:#b83e70;filter:drop-shadow(0 0 24px #fff)}
+#page3.active .final-heart{animation:heartPop .8s 2.35s forwards}
+@keyframes heartPop{to{opacity:1;transform:scale(1)}}
+#page3.active .half{animation-fill-mode:forwards}
+.rain{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}.drop{position:absolute;top:-35px;color:#d96f94;opacity:.5;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(110vh) rotate(35deg);opacity:0}}
+.footer{font:11px Arial;letter-spacing:2px;color:#a47788;margin-top:24px}
+@media(max-width:520px){.page{padding:78px 16px 30px}.gallery{gap:8px}.photo{padding:6px 6px 13px}.photo small{font-size:10px}p{font-size:16px}nav{gap:0}nav button{padding:10px 13px}}
+</style>
+</head>
+<body>
+<div class="rain" id="rain"></div>
+<nav aria-label="Navigasi halaman">
+<button class="active" data-go="0">01 · 𝑳𝒐𝒏𝒈𝑻𝒆𝒙𝒕</button><button data-go="1">02 · 𝑨𝒓𝒄𝒉𝒊𝒗𝒆</button><button data-go="2">03 · 𝑳𝒂𝒔𝒕𝑺𝒍𝒊𝒅𝒆</button>
+</nav>
+
+<section class="page active" id="page1">
+<div class="wrap">
+<div class="eyebrow">𝗙𝗼𝗿 𝗦𝗼𝗺𝗲𝗼𝗻𝗲 𝗧𝗿𝘂𝗹𝘆 𝗦𝗽𝗲𝗰𝗶𝗮𝗹</div>
+<h1>Happy Birthday<br><span id="Salsabila Putri">you</span> ♡</h1>
+<div class="date">Tanggal Lahir: <span id="birthDate">02 November 2012</span> &nbsp;·&nbsp; Hari Ini : 02 Novembee 2026</div>
+<div class="letter">
+<p>ini buat kamu, salsabila putri. selamat bertambah usia ya. hari ini spesial banget buat kamu, and i hope you truly know that. ga semua orang bisa ngerasain hal yang kamu rasain hari ini, tapi yang pasti aku pengen kamu bahagia, bener-bener bahagia, bahagia yang ga cuma di permukaan tapi yang sampe ke dalem hati kamu. you deserve all the good things in this world, tanpa terkecuali, tanpa harus kamu minta, tanpa harus kamu usahain sendirian.</p>
+ <p>aku ga tau kamu ngerasa apa hari ini, mungkin capek, mungkin biasa aja, mungkin seneng, mungkin campur aduk. tapi apapun itu, i just want you to smile today, walau cuma sekali, walau cuma karena hal kecil, walau cuma karena hal yang keliatan sepele. because your smile? it's something worth protecting. kamu ga harus jadi sempurna buat dihargain, kamu ga harus selalu kuat buat dianggap berharga. kamu udah cukup kok jadi diri kamu sendiri, with all your flaws and all your scars. that's what makes you real, that's what makes you beautiful.</p>
+ <p>aku suka cara kamu ketawa, cara kamu ngambek, cara kamu diem, cara kamu ngeluh soal hal-hal kecil, cara kamu peduli sama orang lain tanpa banyak bicara. all those little things about you, itu yang bikin kamu beda, itu yang bikin kamu ga bisa digantiin sama siapapun. maybe you don't realize it, tapi kamu sering banget bikin orang lain ngerasa nyaman, ngerasa didengerin, ngerasa dihargain, termasuk aku. and for that, i'm genuinely grateful.</p>
+ <p>thank you for being you, salsabila putri. thank you for staying strong sampe hari ini, for surviving all the days you thought you couldn't, for waking up even when it felt heavy. kamu udah bertahan sejauh ini, and that alone is something to be proud of. aku ga tau kamu ngerayain sama siapa hari ini, maybe with your closest people, maybe sendirian, tapi from afar, aku ikut doain kamu, ikut seneng buat kamu, ikut berharap yang terbaik buat kamu.</p>
+ <p>semoga tahun ini lebih baik dari tahun kemarin. semoga hal-hal yang kamu takutin ga pernah terjadi. semoga kamu dikelilingin orang-orang yang bener-bener sayang sama kamu, yang ga cuma ada pas kamu seneng tapi juga pas kamu lagi jatuh. semoga kamu dapet apa yang selama ini kamu diam-diam pengenin, yang mungkin ga pernah kamu ceritain ke siapapun. semoga hati kamu selalu tenang, semoga pikiran kamu ga terlalu bising, semoga kamu bisa tidur nyenyak tanpa overthinking.</p>
+<p>if one day you feel tired, if one day you want to give up, inget aja kalau ada yang pengen kamu bahagia, including me. kamu ga pernah sendirian, even when it feels like it. once again, happy birthday, salsabila putri. jangan lupa makan yang bener, jangan kebanyakan mikir, jangan lupa istirahat, jangan lupa bahagia. you are precious, more than you think, more than you'll ever know.</p>
+<p>selamat ulang tahun. semoga semesta lebih sering baik sama kamu. hari ini, besok, dan seterusnya. ♡</p>
+<div class="signature">i found my happiness<br>the moment i met you❣︎</div>
+</div>
+<button class="next" onclick="go(1)">𝑯𝒂𝒍𝒂𝒎𝒂𝒏 𝑩𝒆𝒓𝒊𝒌𝒖𝒕𝒏𝒚𝒂</button>
+<div class="footer">ArpanBilaa - 2026</div>
+</div></section>
+
+<section class="page" id="page2">
+<div class="wrap">
+<div class="eyebrow">𝑳𝒊𝒕𝒕𝒍𝒆 𝑷𝒊𝒆𝒄𝒆𝒔 𝑶𝒇 𝒀𝒐𝒖. </div><h2>𝐇𝐚𝐥-𝐇𝐚𝐥 𝐊𝐞𝐜𝐢𝐥 𝐘𝐚𝐧𝐠 𝐀𝐤𝐮 𝐒𝐮𝐤𝐚𝐚</h2>
+<p class="soft-note">𝗦𝗲𝗻𝘆𝘂𝗺𝗮𝗻 𝗞𝗮𝗺𝘂, 𝗧𝗲𝗿𝘁𝗮𝘄𝗮 𝗞𝗮𝗺𝘂, 𝗖𝗲𝗻𝗴𝗲𝗻𝗴𝗻𝘆𝗮 𝗞𝗮𝗺𝘂, 𝗦𝗲𝗱𝗶𝗵𝗻𝘆𝗮 𝗞𝗮𝗺𝘂, 𝗦𝗲𝗻𝗮𝗻𝗴𝗻𝘆𝗮 𝗞𝗮𝗺𝘂, 𝗗𝗮𝗻 𝗟𝗮𝗶𝗻𝗻𝘆𝗮.</p>
+<div class="gallery">
+<div class="photo" style="--r:-2deg"><img src="photos/foto-1.jpg" alt="Foto kenangan 1"><small>your lovely smile</small></div>
+<div class="photo" style="--r:2deg"><img src="photos/foto-2.jpg" alt="Foto kenangan 2"><small>one of my favorites</small></div>
+<div class="photo" style="--r:-1deg"><img src="photos/foto-3.jpg" alt="Foto kenangan 3"><small>pretty little moment</small></div>
+<div class="photo" style="--r:1.5deg"><img src="photos/foto-4.jpg" alt="Foto kenangan 4"><small>just being you</small></div>
+<div class="photo" style="--r:-2deg"><img src="photos/foto-5.jpg" alt="Foto kenangan 5"><small>a memory to keep</small></div>
+</div>
+<p class="soft-note"><i>"𝑲𝒂𝒍𝒂𝒖 𝑩𝒂𝒉𝒂𝒈𝒊𝒂 𝑰𝒕𝒖 𝑩𝒆𝒓𝒃𝒆𝒏𝒕𝒖𝒌, 𝑴𝒖𝒏𝒈𝒌𝒊𝒏 𝑺𝒂𝒍𝒂𝒉 𝑺𝒂𝒕𝒖𝒏𝒚𝒂 𝑨𝒅𝒂𝒍𝒂𝒉 𝑩𝒆𝒏𝒕𝒖𝒌 𝑻𝒆𝒓𝒊𝒏𝒅𝒂𝒉 𝑫𝒊𝒓𝒊 𝑲𝒂𝒎𝒖.”</i></p>
+<div class="spotify">
+<label for="spotifyLink">𝑷𝒆𝒎𝒖𝒕𝒂𝒓 𝑴𝒖𝒔𝒊𝒄 · 𝐒𝐏𝐎𝐓𝐈𝐅𝐓</label>
+<input id="spotifyLink" placeholder="https://open.spotify.com/track/1sDHHLFY06AFKR2X722wIf?si=psdbogUEQBCY7e4E-vNZbw&utm_source=copy-link" aria-label="Link lagu Spotify">
+<button class="next" style="margin:4px 0 12px" onclick="loadSpotify()">♫ - ᴛᴀᴍᴘɪʟᴋᴀɴ ᴍᴜsɪᴄ</button>
+<div id="spotifyPlayer"><p style="font:13px Arial;color:#9a7b88">Pemutar Lagu Akan Muncul DiSini Setelah Link Spotify Ditempel.</p></div>
+</div>
+<button class="next" onclick="go(2)">𝑻𝒉𝒆 𝑳𝒂𝒔𝒕 𝑺𝒍𝒊𝒅𝒆</button>
+</div></section>
+
+<section class="page" id="page3">
+<div class="wrap">
+<div class="eyebrow">one last thing</div><h2>for you, always</h2>
+<div class="heart-stage"><span class="half left">♥</span><span class="half right">♥</span><span class="final-heart">♥</span></div>
+<p class="soft-note">semoga kamu nggak pernah lupa kalau kamu berharga, disayangi, dan layak mendapatkan banyak hal baik. happy birthday sekali lagi. ♡</p>
+<button class="next" onclick="go(0)">baca lagi dari awal ↺</button>
+<div class="footer">YOU DESERVE ALL THE GOOD THINGS</div>
+</div></section>
+<script>
+// EDIT DATA DI SINI
+const CONFIG = { nama: "Salsabila Putri", tanggalLahir: "02 November 2012" };
+document.getElementById("herName").textContent = CONFIG.nama;
+document.getElementById("birthDate").textContent = CONFIG.tanggalLahir;
+
+function go(n){
+ document.querySelectorAll(".page").forEach((p,i)=>p.classList.toggle("active",i===n));
+ document.querySelectorAll("nav button").forEach((b,i)=>b.classList.toggle("active",i===n));
+ if(n===2){const p=document.getElementById("page3");p.classList.remove("active");void p.offsetWidth;p.classList.add("active")}
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>go(Number(b.dataset.go))));
+function loadSpotify(){
+ let raw=document.getElementById("spotifyLink").value.trim();
+ const match=raw.match(/open\.spotify\.com\/(track|album|playlist|episode|show)\/([A-Za-z0-9]+)/);
+ if(!match){document.getElementById("spotifyPlayer").innerHTML='<p style="color:#a33;font:13px Arial">Link Spotify belum sesuai. Salin link lagu dari menu Share → Copy link.</p>';return}
+ document.getElementById("spotifyPlayer").innerHTML=`<iframe title="Spotify player" src="https://open.spotify.com/embed/${match[1]}/${match[2]}?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+}
+// Hujan hati berjalan di semua halaman
+const rain=document.getElementById("rain");
+for(let i=0;i<38;i++){let d=document.createElement("span");d.className="drop";d.textContent=Math.random()>.5?"♥":"♡";d.style.left=Math.random()*100+"%";d.style.fontSize=(10+Math.random()*17)+"px";d.style.animationDuration=(7+Math.random()*12)+"s";d.style.animationDelay=(-Math.random()*18)+"s";rain.appendChild(d)}
+</script>
+</body></html>

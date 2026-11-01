@@ -1,0 +1,20 @@
+CARA MENGISI WEBSITE
+1. Buka folder photos, lalu masukkan 5 foto dengan nama:
+   foto-1.jpg, foto-2.jpg, foto-3.jpg, foto-4.jpg, foto-5.jpg
+2. Urutan yang disarankan:
+   foto-1: foto paling disukai/portrait utama
+   foto-2: foto candid atau sedang tersenyum
+   foto-3: foto aktivitas atau momen bersama
+   foto-4: foto dengan suasana berbeda
+   foto-5: foto favorit untuk penutup galeri
+3. Edit nama dan tanggal lahir di bagian CONFIG dalam index.html.
+4. Untuk audio: buka Spotify > pilih lagu > Share > Copy link.
+   Tempel link itu di kolom Spotify pada halaman kedua lalu tekan tampilkan lagu.
+   Pemutar Spotify membutuhkan koneksi internet. Pengunjung mungkin perlu login Spotify
+   untuk mendengarkan lagu penuh; ini memakai Spotify Embed, bukan API key rahasia.
+5. Wallpaper: letakkan foto pilihan bernama foto-dia.jpg di folder yang sama dengan
+   wallpaper.html. Buka wallpaper.html di browser. Ukurannya dirancang vertikal ponsel.
+6. Website bisa dibuka langsung lewat index.html. Agar bisa dibagikan lewat internet,
+   unggah folder ini ke layanan hosting statis seperti GitHub Pages atau Netlify.
+
+Tanggal hari ini pada versi ini: 2 November 2026.
